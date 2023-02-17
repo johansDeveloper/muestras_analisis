@@ -1,0 +1,58 @@
+FWIN: indicates that the firewall blocked an inbound packet of data coming to your computer. Some, but not all, of these packets are connection attempts. 
+
+FWOUT: indicates that the firewall blocked an outbound packet of data from leaving your computer. 
+
+FWROUTE - the firewall blocked a packet that was not addressed to or from your computer, but was routed through it. 
+
+FWLOOP - the firewall blocked a packet addressed to the loopback adapter (127.0.0.1) 
+
+LOCK - the firewall blocked a packet due to a lock violation 
+
+PE: indicates that an application on your computer requested access to the Internet. 
+
+N/A: "Not Applicable" - for any log file entries (often PE) with less than 6 fields to report, ZA/ZAP will pad that line with "N/A" ACCESS - an application was blocked because it did not have access permission 
+
+MS - MailSafe quarantined a file attachment 
+
+The TCP flags are: 
+S (SYN), 
+F (FIN), 
+R (RESET), 
+P (PUSH), 
+A (ACK), 
+U (URGENT), 
+4 (low-order unused bit), 
+8 (high-order unused bit) 
+
+The SYN-flag is only set in the first packet initiating a TCP connection. It represents an attempt to make a connection rather than a response to an existing connection. The FIN-flag represents an attempt to terminate a connection. 
+
+ICMP types: 
+0 - Echo Reply 
+3 - Destination Unreachable 
+4 - Source Quench 
+5 - Redirect 
+8 - Echo Request 
+9 - Router Advertisement 
+10 - Router Solicitation 
+11 - Time Exceeded 
+12 - Parameter Problem 
+13 - Timestamp Request 
+14 - Timestamp Reply 
+15 - Information Request 
+16 - Information Reply 
+17 - Address Mask Request 
+18 - Address Mask Reply 
+
+If you use netstat (from a DOS prompt, type netstat -an) here are some useful terms to know: 
+
+CLOSE_WAIT Remote shut down: waiting for the socket to close 
+CLOSED The connection is disconnected and not being used 
+CLOSING Closed, then remote shutdown: awaiting ack. Attempting to shut down connection 
+ESTABLISHED Connection has been established, connection is active 
+FIN_WAIT_1 Socket closed, shutting down connection 
+FIN_WAIT_2 Socket closed, waiting for shutdown from other computer 
+LAST_ACK Remote shut down, then closed: awaiting acknowledgement 
+LISTENING Your computer is waiting for an incoming connection 
+SYN_RECEIVED Initial synchronization of the connection under way, about to connect 
+SYN_SENT Actively trying to establish connection 
+TIME_WAIT Wait after close for remote shutdown retransmission 
